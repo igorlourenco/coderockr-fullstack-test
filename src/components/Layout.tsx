@@ -8,6 +8,7 @@ const Layout = (props: FlexProps) => (
         width={`100%`}
         minWidth={`100vw`}
         {...props}
+        direction={`column`}
     >
         {props.children}
     </Flex>
