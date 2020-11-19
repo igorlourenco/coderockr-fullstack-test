@@ -1,12 +1,10 @@
 import {Heading} from '@chakra-ui/core'
-import Layout from "../components/Layout";
-import Header from "../components/Header";
+import Layout from '../components/Layout';
 
 const Index = () => (
-  <Layout>
-      <Header/>
-      <Heading>Coderockr-Teste</Heading>
-  </Layout>
+    <Layout>
+        <Heading>Coderockr-Teste</Heading>
+    </Layout>
 )
 
 export default Index

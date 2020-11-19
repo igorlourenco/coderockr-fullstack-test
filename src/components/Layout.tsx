@@ -1,4 +1,5 @@
 import {Flex, FlexProps} from '@chakra-ui/core'
+import Header from './Header';
 
 const Layout = (props: FlexProps) => (
     <Flex
@@ -7,9 +8,10 @@ const Layout = (props: FlexProps) => (
         minHeight={`100vh`}
         width={`100%`}
         minWidth={`100vw`}
-        {...props}
         direction={`column`}
+        {...props}
     >
+        <Header/>
         {props.children}
     </Flex>
 )
