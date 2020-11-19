@@ -1,19 +1,20 @@
 import {NowRequest, NowResponse} from '@vercel/node'
 import connectToDatabase from '../../../services/database'
-import Contact from '../../../interfaces/Contact'
+import Article from '../../../interfaces/Article'
 
 export default async (request: NowRequest, response: NowResponse) => {
 
-    const {name, email, phone, post}: Contact = request.body
+    const {author, authorEmail, title, articleContent, imageUrl}: Article = request.body
 
     const db = await connectToDatabase(process.env.MONGODB_URI)
-    const collection = db.collection('contacts')
+    const collection = db.collection('articles')
 
     await collection.insertOne({
-        name,
-        email,
-        phone,
-        post,
+        author,
+        authorEmail,
+        title,
+        articleContent,
+        imageUrl,
         sentAt: new Date()
     })
 
