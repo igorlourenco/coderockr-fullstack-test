@@ -1,5 +1,4 @@
 import {Flex, FlexProps} from '@chakra-ui/core'
-import Header from './Header';
 
 const Layout = (props: FlexProps) => (
     <Flex
@@ -11,7 +10,6 @@ const Layout = (props: FlexProps) => (
         direction={`column`}
         {...props}
     >
-        <Header/>
         {props.children}
     </Flex>
 )

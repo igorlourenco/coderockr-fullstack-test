@@ -13,8 +13,11 @@ import {useState} from 'react'
 import ContactForm from './ContactForm'
 
 const MenuItem = (props: TextProps) => (
-    <Text display={`block`} fontSize={[`24px`, `28px`, `32px`, `32px`]} marginX={5}
-          fontWeight={`medium`} {...props}>
+    <Text display={`block`}
+          fontSize={[`24px`, `28px`, `32px`, `32px`]}
+          marginX={5}
+          fontWeight={`medium`}
+          {...props}>
         {props.children}
     </Text>
 )
@@ -26,17 +29,16 @@ const Header = (props: FlexProps) => {
     const handleToggle = () => setShow(!show);
 
     return (
-        <Flex
-            as={`nav`}
-            align={`center`}
-            justify={`space-between`}
-            wrap={`wrap`}
-            padding={3}
-            paddingX={[6, 6, 12, 12]}
-            backgroundColor={`#2D2D2D`}
-            color={`#FFFFFF`}
-            {...props}
-        >
+        <Flex as={`nav`}
+              align={`center`}
+              justify={`space-between`}
+              wrap={`wrap`}
+              padding={3}
+              paddingX={[6, 6, 12, 12]}
+              backgroundColor={`#2D2D2D`}
+              color={`#FFFFFF`}
+              {...props}>
+
             <Flex align={`center`}>
                 <Heading fontSize={[`30px`, `32px`, `36px`, `36px`]} fontWeight={`bold`} fontStyle={`normal`}>
                     Rockr Blog
@@ -44,19 +46,16 @@ const Header = (props: FlexProps) => {
             </Flex>
 
             <Box display={[`block`, `block`, `none`, `none`]} onClick={handleToggle}>
-                <IconButton
-                    colorScheme={`#FFFFFF`}
-                    aria-label="Menu"
-                    icon={<HamburgerIcon/>}
-                />
+                <IconButton colorScheme={`#FFFFFF`}
+                            aria-label="Menu"
+                            icon={<HamburgerIcon/>}/>
             </Box>
 
-            <Box
-                display={[show ? `block` : `none`, show ? `block` : `none`, `flex`, `flex`]}
-                width={[`full`, `full`, `auto`, `auto`]}
-                marginTop={[4, 4, 0, 0]}
-                alignItems={`center`}
-            >
+            <Box display={[show ? `block` : `none`, show ? `block` : `none`, `flex`, `flex`]}
+                 width={[`full`, `full`, `auto`, `auto`]}
+                 marginTop={[4, 4, 0, 0]}
+                 alignItems={`center`}>
+
                 <MenuItem>Posts</MenuItem>
                 <MenuItem onClick={onOpen}>Contact</MenuItem>
                 <Modal isCentered isOpen={isOpen} onClose={onClose} size={`xl`}>
@@ -66,11 +65,12 @@ const Header = (props: FlexProps) => {
                                      color={`#F1A10A`}
                                      fontStyle={`normal`}
                                      fontWeight={`bold`}
-                                     fontSize={[`30px`, `32px`, `36px`, `36px`]}
-                        >Contact</ModalHeader>
+                                     fontSize={[`30px`, `32px`, `36px`, `36px`]}>
+                            Contact
+                        </ModalHeader>
                         <ModalCloseButton/>
                         <ModalBody>
-                           <ContactForm/>
+                            <ContactForm/>
                         </ModalBody>
                     </ModalContent>
                 </Modal>
