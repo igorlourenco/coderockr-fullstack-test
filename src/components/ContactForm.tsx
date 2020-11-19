@@ -42,14 +42,16 @@ const ContactForm = () => {
 
         const response = await fetch('/api/contact/create', {
             method: 'POST',
-            body: JSON.stringify(
-                {
-                    name,
-                    email,
-                    phone,
-                    post
-                }
-            )
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+            },
+            body: JSON.stringify({
+                name,
+                email,
+                phone,
+                post
+            })
         })
 
         setIsLoading(false)

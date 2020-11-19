@@ -43,7 +43,7 @@ const Header = (props: FlexProps) => {
                 </Heading>
             </Flex>
 
-            <Box display={{base: "block", md: "none"}} onClick={handleToggle}>
+            <Box display={[`block`, `block`, `none`, `none`]} onClick={handleToggle}>
                 <IconButton
                     colorScheme={`#FFFFFF`}
                     aria-label="Menu"
