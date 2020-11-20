@@ -1,11 +1,14 @@
-import {Heading} from '@chakra-ui/core'
-import Layout from '../components/Layout';
-import Header from "../components/Header";
+import {Box} from '@chakra-ui/core'
+import Layout from '../components/Layout'
+import Header from '../components/Header'
+import Main from '../components/Blog/Main'
 
 const Index = () => (
     <Layout>
-        <Header/>
-        <Heading>Coderockr-Teste</Heading>
+        <Box>
+            <Header/>
+            <Main/>
+        </Box>
     </Layout>
 )
 
