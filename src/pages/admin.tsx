@@ -1,7 +1,7 @@
 import {Flex} from '@chakra-ui/core'
 import Layout from '../components/Layout'
 import Header from '../components/Header'
-import Contacts from '../components/Contacts'
+import Contacts from '../components/Contact/Contacts'
 
 const AdminPage = () => {
     return (

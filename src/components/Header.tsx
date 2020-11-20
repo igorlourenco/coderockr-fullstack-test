@@ -10,7 +10,7 @@ import {
 } from '@chakra-ui/core'
 import {HamburgerIcon} from '@chakra-ui/icons'
 import {useState} from 'react'
-import ContactForm from './ContactForm'
+import ContactForm from './Contact/ContactForm'
 
 const MenuItem = (props: TextProps) => (
     <Text display={`block`}

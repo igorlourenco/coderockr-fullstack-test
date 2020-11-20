@@ -9,9 +9,9 @@ import {
     Text
 } from '@chakra-ui/core'
 import {MdAccessTime, MdLocalPhone, MdMail, MdMessage, MdPerson} from 'react-icons/md'
-import {dateFormatter} from '../util'
-import {useFetch} from '../services/swr'
-import Loading from './message/Loading'
+import {dateFormatter} from '../../util'
+import {useFetch} from '../../services/swr'
+import Loading from '../message/Loading'
 import {IconType} from 'react-icons'
 
 interface ContactIconProps extends IconProps {
