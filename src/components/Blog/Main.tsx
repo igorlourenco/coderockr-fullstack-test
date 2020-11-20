@@ -3,7 +3,7 @@ import Loading from '../message/Loading';
 import {Heading} from "@chakra-ui/layout";
 
 const Main = () => {
-    const {data} = useFetch('api/article/get-all')
+    const {data} = useFetch('api/article/get-all/?page=1')
 
     if (!data) return <Loading/>
 
