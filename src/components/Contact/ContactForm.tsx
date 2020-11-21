@@ -1,32 +1,11 @@
-import {
-    Button,
-    Center,
-    FormControl,
-    FormLabel as ChakraFormLabel,
-    FormLabelProps,
-    Icon,
-    Input,
-    InputProps,
-    Textarea
-} from '@chakra-ui/core'
+import {Button, Center, Icon, Textarea, useToast} from '@chakra-ui/core'
 import {MdSend} from 'react-icons/md'
+import {FormControl, FormInput, FormLabel} from '../FormElements'
 import {FormEvent, useState} from 'react'
-
-const FormLabel = (props: FormLabelProps) => (
-    <ChakraFormLabel fontSize={[`18px`, `18px`, `20px`, `20px`]} {...props}>
-        {props.children}
-    </ChakraFormLabel>
-)
-
-const FormInput = (props: InputProps) => (
-    <Input border={`1px`}
-           borderColor={`#2D2D2D`}
-           borderRadius={`4px`}
-           {...props}
-    />
-)
+import {successToast, errorToast, clearInputs} from '../../util'
 
 const ContactForm = () => {
+    const toast = useToast()
 
     const [name, setName] = useState<string>()
     const [email, setEmail] = useState<string>()
@@ -55,36 +34,39 @@ const ContactForm = () => {
         })
 
         setIsLoading(false)
+
         if (response.status === 201) {
-            // TODO: add alert toast
-            alert("dados enviados")
+            successToast(toast, 'Success!', 'Your data has been sent. Soon we will contact you.')
+            clearInputs()
+        } else {
+            errorToast(toast)
         }
     }
 
     return (
         <form onSubmit={handleSubmitContactForm}>
-            <FormControl id={`name`} marginBottom={5}>
+            <FormControl id={`name`}>
                 <FormLabel>Name</FormLabel>
                 <FormInput type={`text`}
                            value={name}
                            onChange={e => setName(e.target.value)}
                            placeholder={`Fill your full name`}/>
             </FormControl>
-            <FormControl id={`email`} marginBottom={5}>
+            <FormControl id={`email`}>
                 <FormLabel>E-mail</FormLabel>
                 <FormInput type={`email`}
                            value={email}
                            onChange={e => setEmail(e.target.value)}
                            placeholder={`Fill a valid email`}/>
             </FormControl>
-            <FormControl id={`phone`} marginBottom={5}>
+            <FormControl id={`phone`}>
                 <FormLabel>Phone</FormLabel>
                 <FormInput type={`text`}
                            value={phone}
                            onChange={e => setPhone(e.target.value)}
                            placeholder={`Fill your phone`}/>
             </FormControl>
-            <FormControl id={`post`} marginBottom={5}>
+            <FormControl id={`post`}>
                 <FormLabel>Post</FormLabel>
                 <Textarea border={`1px`}
                           borderColor={`#2D2D2D`}
