@@ -10,19 +10,10 @@ export default async (request: NowRequest, response: NowResponse) => {
     const db = await connectToDatabase(process.env.MONGODB_URI)
     const collection = db.collection('articles')
 
-    let articles = []
-
-    if (page) {
-         articles = await collection.find({})
+    const articles = await collection.find({})
             .limit(numberOfArticlesPerPage * currentPage)
             .sort({sentAt: -1})
             .toArray()
-    }
-
-    else {
-         articles = await collection.find({})
-            .toArray()
-    }
 
     const numberOfArticles = await collection.countDocuments()
 

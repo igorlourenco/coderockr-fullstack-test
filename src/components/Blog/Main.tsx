@@ -22,7 +22,7 @@ const Main = () => {
             {data.articles.map((article: Article, index) => {
                 if (index % 3 == 0) {
                     return (
-                        <Link href={`article/?article=${article._id}`}>
+                        <Link href={`article/${article._id}`}>
                             <ArticlePreview article={article} width={[`auto`, `auto`, `50%`, `50%`]}/>
                         </Link>
                     )
@@ -30,7 +30,9 @@ const Main = () => {
 
                 if (index % 3 == 1) {
                     return (
-                        <ArticlePreview article={article} width={[`auto`, `auto`, `50%`, `50%`]}/>
+                        <Link href={`article/${article._id}`}>
+                            <ArticlePreview article={article} width={[`auto`, `auto`, `50%`, `50%`]}/>
+                        </Link>
                     )
                 }
             })}
