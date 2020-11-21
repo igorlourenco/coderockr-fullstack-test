@@ -4,7 +4,7 @@ import {
     AccordionIcon as ContactsIcon,
     AccordionItem as ContactsItem,
     AccordionPanel as ContactsPanel,
-    Box, BoxProps, Flex, FlexProps, Heading,
+    Box, Flex, FlexProps, Heading,
     Icon, IconProps,
     Text
 } from '@chakra-ui/core'

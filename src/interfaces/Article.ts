@@ -1,4 +1,5 @@
 interface Article {
+    _id?: string
     author: string
     authorEmail: string
     title: string
