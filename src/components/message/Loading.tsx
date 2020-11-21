@@ -1,10 +1,10 @@
 import {Heading} from '@chakra-ui/core'
-import Layout from "../Layout";
+import Layout from '../Layout'
 
 const Loading = () => (
-    <Layout alignItems={`center`} justifyContent={`center`}>
+    <Layout height={`50vh`} alignItems={`center`} justifyContent={`center`}>
         <Heading color={`#FFF`}>
-            Loading data...
+            Loading...
         </Heading>
     </Layout>
 )

@@ -11,8 +11,7 @@ export default async (request: NowRequest, response: NowResponse) => {
     const collection = db.collection('articles')
 
     const articles = await collection.find({})
-        .skip(currentPage > 0 ? ((currentPage - 1) * numberOfArticlesPerPage) : 0)
-        .limit(numberOfArticlesPerPage)
+        .limit(numberOfArticlesPerPage * currentPage)
         .toArray()
 
     const numberOfArticles = await collection.countDocuments()
