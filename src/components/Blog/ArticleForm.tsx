@@ -46,7 +46,7 @@ const ArticleForm = () => {
     }
 
     return (
-        <Flex direction={`column`} margin={3} backgroundColor={`#FFFFFF`} justifyContent={`center`} padding={4} as={`form`}
+        <Flex direction={`column`} margin={3} alignSelf={`center`} justifySelf={`center`} width={[`95vw`, `85vw`, `75vw`, `70vw`]} backgroundColor={`#FFFFFF`} justifyContent={`center`} padding={4} as={`form`}
               onSubmit={handleSubmitContactForm}>
             <FormControl id={`author`}>
                 <FormLabel>Author Name</FormLabel>

@@ -34,11 +34,31 @@ const Main = () => {
 
     return (
         <>
-            {data.articles.map(article => (
-            <Heading key={article._id} marginY={12}>
-                {article.author}
-            </Heading>
-            ))}
+            {data.articles.map((article, index) => {
+                if(index%3===0){
+                    return (
+                        <Heading color={`#FFFFFF`} key={article._id} marginY={12}>
+                            {article.author}
+                        </Heading>
+                    )
+                }
+
+                if(index%3===1){
+                    return (
+                        <Heading color={`#ff0000`} key={article._id} marginY={12}>
+                            {article.author}
+                        </Heading>
+                    )
+                }
+
+                if(index%3===2){
+                    return (
+                        <Heading color={`#00ff00`} key={article._id} marginY={12}>
+                            {article.author}
+                        </Heading>
+                    )
+                }
+            })}
 
             <LoadMorePosts isDisabled={morePostsIsDisabled} onClick={() => setPage(page + 1 )}/>
         </>

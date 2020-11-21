@@ -5,7 +5,7 @@ export default async (request: NowRequest, response: NowResponse) => {
     const db = await connectToDatabase(process.env.MONGODB_URI)
     const collection = db.collection('contacts')
 
-    const contacts =  await collection.find({}).toArray()
+    const contacts =  await collection.find({}).sort({sentAt: -1}).toArray()
 
     return response.status(200).send(contacts)
 }

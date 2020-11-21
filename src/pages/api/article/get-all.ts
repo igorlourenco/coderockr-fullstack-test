@@ -12,6 +12,7 @@ export default async (request: NowRequest, response: NowResponse) => {
 
     const articles = await collection.find({})
         .limit(numberOfArticlesPerPage * currentPage)
+        .sort({sentAt: -1})
         .toArray()
 
     const numberOfArticles = await collection.countDocuments()

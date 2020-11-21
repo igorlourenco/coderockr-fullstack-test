@@ -11,6 +11,7 @@ import {
 import {HamburgerIcon} from '@chakra-ui/icons'
 import {useState} from 'react'
 import ContactForm from './Contact/ContactForm'
+import Link from 'next/link'
 
 const MenuItem = (props: TextProps) => (
     <Text display={`block`}
@@ -40,9 +41,11 @@ const Header = (props: FlexProps) => {
               {...props}>
 
             <Flex align={`center`}>
-                <Heading fontSize={[`30px`, `32px`, `36px`, `36px`]} fontWeight={`bold`} fontStyle={`normal`}>
-                    Rockr Blog
-                </Heading>
+                <Link href={`/`}>
+                    <Heading fontSize={[`30px`, `32px`, `36px`, `36px`]} fontWeight={`bold`} fontStyle={`normal`}>
+                        Rockr Blog
+                    </Heading>
+                </Link>
             </Flex>
 
             <Box display={[`block`, `block`, `none`, `none`]} onClick={handleToggle}>
@@ -56,7 +59,11 @@ const Header = (props: FlexProps) => {
                  marginTop={[4, 4, 0, 0]}
                  alignItems={`center`}>
 
-                <MenuItem>Posts</MenuItem>
+                <MenuItem>
+                    <Link href={`/`}>
+                        Posts
+                    </Link>
+                </MenuItem>
                 <MenuItem onClick={onOpen}>Contact</MenuItem>
                 <Modal isCentered isOpen={isOpen} onClose={onClose} size={`xl`}>
                     <ModalOverlay/>

@@ -1,11 +1,9 @@
-import {Heading} from '@chakra-ui/core'
+import {Spinner} from '@chakra-ui/core'
 import Layout from '../Layout'
 
 const Loading = () => (
-    <Layout height={`50vh`} alignItems={`center`} justifyContent={`center`}>
-        <Heading color={`#FFF`}>
-            Loading...
-        </Heading>
+    <Layout alignItems={`center`} justifyContent={`center`}>
+        <Spinner color={`#FFFFFF`} size={`xl`}/>
     </Layout>
 )
 
