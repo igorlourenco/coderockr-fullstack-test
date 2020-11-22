@@ -7,7 +7,6 @@ import Header from '../../components/Header'
 import {dateFormatter} from '../../util'
 
 const Article = () => {
-    const stringToHtmlParser = new DOMParser()
     
     const router = useRouter()
     const { article } = router.query
