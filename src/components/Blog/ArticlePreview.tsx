@@ -7,7 +7,7 @@ const ArticlePreview = (props: ArticlePreviewProps) => {
         <Flex direction={[`column`, `column`, `row`, `row`]}
               margin={[3, 3, 0, 0]} backgroundColor={`#FFFFFF`} {...props} justifyContent={`space-around`}>
             <Flex height={[`40vh`, `40vh`, `auto`, `auto`]}>
-                <Image objetcFit={`cover`} boxSize={`100%`} src={props.article.imageUrl}/>
+                <Image objectFit={`cover`} boxSize={`100%`} src={props.article.imageUrl}/>
             </Flex>
             <Flex direction={`column`} paddingX={4} paddingY={3}>
                 <Text marginBottom={3}>{props.article.author}</Text>

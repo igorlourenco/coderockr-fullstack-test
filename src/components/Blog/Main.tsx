@@ -5,7 +5,7 @@ import {morePostsButtonIsDisabled} from '../../util'
 import Article from '../../interfaces/Article'
 import ArticlePreview from './ArticlePreview'
 import LoadMorePosts from '../LoadMorePosts'
-import Link from "next/link";
+import {Link} from '@chakra-ui/core'
 
 const Main = () => {
     const [page, setPage] = useState(1)
@@ -22,7 +22,7 @@ const Main = () => {
             {data.articles.map((article: Article, index) => {
                 if (index % 3 == 0) {
                     return (
-                        <Link href={`article/${encodeURIComponent(article._id)}`}>
+                        <Link _hover={{textDecoration: 'none'}} key={index} href={`article/${encodeURIComponent(article._id)}`}>
                             <ArticlePreview article={article} width={[`auto`, `auto`, `50%`, `50%`]}/>
                         </Link>
                     )
@@ -30,7 +30,7 @@ const Main = () => {
 
                 if (index % 3 == 1) {
                     return (
-                        <Link href={`article/${encodeURIComponent(article._id)}`}>
+                        <Link _hover={{textDecoration: 'none'}} key={index} href={`article/${encodeURIComponent(article._id)}`}>
                             <ArticlePreview article={article} width={[`auto`, `auto`, `50%`, `50%`]}/>
                         </Link>
                     )
