@@ -34,7 +34,7 @@ const ArticlesAdminPreview = () => {
                 {data.articles.map(article => (
                     <Flex key={article._id} justifyContent={`space-between`} marginBottom={5} borderBottom={`1px`}
                           borderBottomColor={`#DDDDDD`}>
-                        <Box flex={`1`} textAlign={`left`}>
+                        <Box flex={`2`} textAlign={`left`}>
                             <ArticleIcon icon={MdBook}/> {article.title}
                         </Box>
                         <Box flex={`1`} textAlign={`left`}>

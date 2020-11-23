@@ -1,10 +1,9 @@
-import {Spinner} from '@chakra-ui/core'
-import Layout from '../Layout'
+import {Flex, Spinner} from '@chakra-ui/core'
 
 const Loading = () => (
-    <Layout width={`100px`} alignItems={`center`} justifyContent={`center`}>
+    <Flex height={`50vh`} justifyContent={`center`} alignItems={`center`}>
         <Spinner color={`#FFFFFF`} size={`xl`}/>
-    </Layout>
+    </Flex>
 )
 
 export default Loading

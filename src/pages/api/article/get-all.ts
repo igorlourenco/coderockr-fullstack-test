@@ -14,6 +14,7 @@ export default async (request: NowRequest, response: NowResponse) => {
 
     if (page === '') {
         articles = await collection.find({})
+            .sort({sentAt: -1})
             .toArray()
     } else {
         articles = await collection.find({})

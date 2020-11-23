@@ -67,7 +67,7 @@ const Header = (props: FlexProps) => {
                 <MenuItem onClick={onOpen}>Contact</MenuItem>
                 <Modal isCentered isOpen={isOpen} onClose={onClose} size={`xl`}>
                     <ModalOverlay/>
-                    <ModalContent borderRadius={0} padding={[3, 3, 12, 12]}>
+                    <ModalContent borderRadius={0} >
                         <ModalHeader align={`center`}
                                      color={`#F1A10A`}
                                      fontStyle={`normal`}

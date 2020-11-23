@@ -1,7 +1,8 @@
 import text from "node-html-parser/dist/nodes/text";
 
 export const dateFormatter = (date) => {
-    return new Date(date).toLocaleDateString("br-BR")
+    const options = {year: 'numeric', month: 'long', day: 'numeric' }
+    return new Date(date).toLocaleDateString("en-US", options)
 }
 
 export const morePostsButtonIsDisabled = (currentPage: number, numberOfArticles: number, articlesPerPage: number) => {
