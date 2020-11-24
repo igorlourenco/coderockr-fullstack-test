@@ -39,3 +39,37 @@ The choice of technologies was based on the context and complexity of the applic
 
 Given this, we have advantages in using Next.js for its backend and frontend treatment, bringing the two together in one application, avoiding over-engineering and, at the same time, separating backend and frontend in a healthy way for development, maintenance and performance.
 
+--- 
+### 3. 🛠 Installing
+1. Clone this project for your machine;
+
+2. Navigate to the project folder and open the command prompt of your choice;
+
+3. Once in the directory, execute the command to install the necessary libraries for the project to work:
+   `npm install`or `yarn install`, depending on your preferred package manager;
+   
+4. After installation, it is necessary to configure the development environment:
+   * I renamed the `.env.example` file to` .env`
+   * fill in the variable `MONGODB_URI` with the URI that gives access to the database where the blog information is. In my case, I used the following: `mongodb+srv://admincoderockr:admincoderockr@cluster0.vvdeb.mongodb.net/coderockrtest?retryWrites=true&w=majority`.
+
+5. Now it's time to run the application, typing `npm run dev` or` yarn dev`, depending on your package manager.
+
+6. The blog must be running on [http://localhost:3000](http://localhost:3000/).
+
+
+---
+### 4. 🎉 Using & testing
+* Blog readers:
+   * on the blog's homepage, you can see all the articles that have been written and, by clicking on one, read it in its entirety;
+   * it is also possible to request contact with the writers, leaving your details and a message.
+
+* Administrators
+   * the blog admin area is at [http: // localhost: 3000 / admin] (http: // localhost: 3000 / admin /);
+   * on the admin homepage, you can monitor which readers have requested a conversation, their contact details and the message left;
+   * it is also possible to write a new article by clicking on the `New Article` button and submitting it.
+   
+---
+###### I hope the project documentation is clear. Any questions, please contact me by email.
+
+---
+Made With ❤️ & TypeScript by Igor Lourenço
