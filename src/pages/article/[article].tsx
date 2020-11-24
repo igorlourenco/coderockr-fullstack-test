@@ -19,8 +19,8 @@ const Article = () => {
         <Layout>
             <Header/>
             <Flex alignItems={`center`} justifyContent={`center`}>
-                <Flex direction={`column`} margin={[3, 3, 12, 12]} backgroundColor={`#FFFFFF`}
-                      maxWidth={[`auto`, `auto`, `80vh`, `90vh`]}>
+                <Flex direction={`column`} margin={[3, 3, 8, 8]} backgroundColor={`#FFFFFF`}
+                      maxWidth={[`auto`, `auto`, `70vw`, `70vw`]}>
                     <Flex direction={`column`}>
                         <Flex direction={[`column`, `column`, `row`, `row`]}
                               maxHeight={[`auto`, `auto`, `40vh`, `40vh`]}>
